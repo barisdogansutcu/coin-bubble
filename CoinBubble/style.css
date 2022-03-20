@@ -1,0 +1,121 @@
+body {
+    background-color: hsl(0deg 0% 13%);
+}
+
+* {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.content-bubble-service .coin-title {
+    position: absolute;
+    color: #ffffff85;
+    bottom: 15px;
+    z-index: 9;
+}
+
+.coin-bubble.center-bubble {
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 100px;
+}
+
+.content-bubble-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.coin-bubble .bubble-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+.bubble-progress:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 100%;
+    border: solid 5px hsl(0deg 0% 13%);
+    border-radius: 100%;
+    background-color: hsl(0deg 0% 13%);
+}
+
+.coin-bubble .bubble-progress .bubble-round .bubble-wave {
+    position: relative;
+    z-index: 1;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    border-radius: 35%;
+    animation: wave 12s linear infinite;
+    transition: all 1s ease;
+}
+
+.coin-bubble .bubble-progress .bubble-round .bubble-wave.animation {
+    top: calc(100% - 0%) !important;
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.coin-bubble .bubble-progress .bubble-round .bubble-percent {
+    font-size: 90px;
+    font-weight: bold;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border: solid 5px hsl(0deg 0% 13%);
+    border-radius: 100%;
+}
+
+.coin-bubble .bubble-progress .bubble-round .bubble-percent:before {
+    content: '';
+    position: absolute;
+    left: -119%;
+    top: -133%;
+    width: 200%;
+    height: 200%;
+    background-color: hsl(0deg 0% 100% / 15%);
+    border-radius: 100%;
+}
+
+.coin-bubble .bubble-progress .bubble-round {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.coin-bubble .content-bubble-text .bubble-paragrapy {
+    font-size: 12px;
+    color: hsl(0deg 0% 100%);
+    text-align: center;
+}

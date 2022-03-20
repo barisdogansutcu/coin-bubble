@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;700;800&display=swap" rel="stylesheet">
+    <title>Coin Bubble</title>
+</head>
+<body>
+    <div class="center-mode">
+        <div class="coin-bubble center-bubble">
+            <div class="content-bubble-text">
+                <div class="bubble-paragrapy">
+                    Coinbase, kripto satın almak ve satmak için en kolay yerdir. <br>
+                    Kaydolun, hemen başlayın.
+                </div>
+            </div>
+            <div class="content-bubble-service">
+                <div class="bubble-progress" style="border: 5px solid hsl(120deg 97% 66%);box-shadow: 0 0 20px hsl(120deg 97% 30%);">
+                    <span class="coin-title">BTC</span>
+                    <div class="bubble-round">
+                        <div class="bubble-percent" style="color: hsl(120deg 83% 44%);text-shadow: 0 0 10px hsl(120deg 19% 58%);"><span>%</span><div id="bubblepercent1">0</div></div>
+                        <div class="bubble-wave animation" style="background: hsl(125deg 84% 34%);box-shadow: 0 0 20px hsl(120deg 97% 37%);top: calc(100% - 70%);"></div>
+                    </div>
+                </div>
+                <div class="bubble-progress" style="border: 5px solid hsl(52deg 89% 34%);box-shadow: 0 0 20px hsl(52deg 89% 34%);">
+                    <span class="coin-title">DOGE</span>
+                    <div class="bubble-round">
+                        <div class="bubble-percent" style="color: hsl(52deg 79% 46%);text-shadow: 0 0 10px hsl(52deg 89% 34%);"><span>%</span><div id="bubblepercent2">0</div></div>
+                        <div class="bubble-wave animation" style="background: hsl(52deg 89% 34%);box-shadow: 0 0 20px hsl(52deg 89% 34%);top: calc(100% - 30%);"></div>
+                    </div>
+                </div>
+                <div class="bubble-progress" style="border: 5px solid hsl(0deg 83% 58%);box-shadow: 0 0 20px hsl(0deg 83% 26%);">
+                    <span class="coin-title">SHIB</span>
+                    <div class="bubble-round">
+                        <div class="bubble-percent" style="color: hsl(0deg 83% 35%);text-shadow: 0 0 10px hsl(0deg 83% 26%);"><span>%</span><div id="bubblepercent3">0</div></div>
+                        <div class="bubble-wave animation" style="background: rgba(237,59,59,0.5);box-shadow: 0 0 20px #9b0e0e;top: calc(100% - 10%);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.1/countUp.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.bubble-wave').removeClass('animation');
+    var countOptions = {
+        useEasing: true,
+        separator: ''
+    }
+    var count = new CountUp('bubblepercent1', 0, 81, 0, 0, countOptions)
+            count.start(function() {
+    })
+    var countOptions = {
+        useEasing: true,
+        separator: ''
+    }
+    var count = new CountUp('bubblepercent2', 0, 30, 0, 0, countOptions)
+        count.start(function() {
+    })
+    var countOptions = {
+        useEasing: true,
+        separator: ''
+    }
+    var count = new CountUp('bubblepercent3', 0, 10, 0, 0, countOptions)
+        count.start(function() {
+    })
+});
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 # Coin Bubble 
 
-Screen Shoot
-# ![image](https://user-images.githubusercontent.com/32280358/159143503-0d11a716-ac19-4d53-a33a-ab189204c062.png)
+# GIF
+![Coin Bubble](https://user-images.githubusercontent.com/32280358/159143664-110ca248-e9dd-4a29-b9ad-bd8b09024a8e.gif)
+# DEMO : https://barisdogansutcu.com/CoinBubble/
